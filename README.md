@@ -1,6 +1,6 @@
 Client Side Development - Group 2
 
-![UlsterActive Website Screenshot](Images/MainDesign.png)
+![UlsterActive Website Screenshot](Website/Images/MainDesign.png)
 
 Project Structure
 
