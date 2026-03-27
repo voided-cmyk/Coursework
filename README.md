@@ -1,5 +1,7 @@
 Client Side Development - Group 2
 
+![UlsterActive Website Screenshot](.Images/MainDesign.png)
+
 Project Structure
 
     MainWebsite/: The core folder containing all files for the live site.
