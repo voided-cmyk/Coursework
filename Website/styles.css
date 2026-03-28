@@ -6,11 +6,11 @@
     --mid-grey:   #2e2e2e;
     --light-grey: #aaaaaa;
     --white:      #ffffff;
-    --red:        #e31b1b;   /* our main brand colour */
+    --red:        #e31b1b;   /* Main brand colour */
     --red-hover:  #b81515;
-
-    --font-heading: "Oswald", sans-serif; /* our brand fonts */
-    --font-body:    "Lato", sans-serif;
+   
+    --font-heading: "Oswald", sans-serif;  /* brand font */
+    --font-body:    "Lato", sans-serif;  /* brand font */
 
     --nav-height: 70px; /* height of the navigation bar */
 }
@@ -78,14 +78,13 @@ img {
     color: var(--red);        /* "Active" part of the logo colour */
 }
 
-/* Nav links container */
 #navigation-links {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-/* Individual nav links */
+/* Navigation links within list items */
 #navigation-links > li > a {
     font-family: var(--font-heading);
     font-size: 0.95rem;
@@ -123,7 +122,7 @@ img {
     transform: translateY(-2px);  /* subtle lift on hover */
 }
 
-/* extend-menu button (mobile only hidden on PC) */
+/* extend-menu button */
 #extend-menu {
     display: none;
     background: none;
@@ -140,7 +139,7 @@ img {
 
 /* The dropdown list hidden by default */
 .dropdown {
-    position: absolute;       /* positions relative to the parent <li> */
+    position: absolute;       /* positions appear at parent <li> */
     top: 100%;                /* directly below the parent link */
     left: 0;
     background-color: var(--dark-grey);
@@ -201,7 +200,7 @@ img {
     padding-top: var(--nav-height);
 
     /* Placeholder photo background */
-    background-image: url("ADDGYMHERE"); 
+    background-image: url("Website/Images/greeter-bg.jpg"); 
     background-size: cover;
     background-position: center;
 }
@@ -224,7 +223,7 @@ img {
 
 .greeter-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 8vw, 5.5rem);  /* fluid font size */
+    font-size: 5.5rem; 
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.1;
@@ -260,6 +259,76 @@ img {
 .try-free-pass:hover {
   background-color: var(--red-hover);
   transform: translateY(-2px);  /* subtle lift on hover */
+}
+
+/* =================== FEATURES HOME =================== */
+
+#features {
+  background-color: var(--dark);
+  padding: 80px 40px;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Red underline decoration on section titles */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--red);
+  margin: 12px auto 0;
+}
+
+/* CSS Grid: up to 3 columns, auto-fill handles any number of cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: var(--dark-grey);
+    border-radius: 6px;
+    padding: 36px 28px;
+    border-top: 3px solid var(--red);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(218, 27, 27, 0.2);
+}
+
+.feature-img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--light-grey);
+    font-size: 1rem;
 }
 
 /* =================== FOOTER =================== */
