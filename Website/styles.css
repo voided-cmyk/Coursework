@@ -200,7 +200,7 @@ img {
     padding-top: var(--nav-height);
 
     /* Placeholder photo background */
-    background-image: url("Website/Images/greeter-bg.jpg"); 
+    background-image: url("Images/general-img-square.png"); 
     background-size: cover;
     background-position: center;
 }
@@ -301,7 +301,7 @@ img {
 .feature-card {
     background-color: var(--dark-grey);
     border-radius: 6px;
-    padding: 36px 28px;
+    padding: 15px 15px;
     border-top: 3px solid var(--red);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -309,11 +309,12 @@ img {
 .feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(218, 27, 27, 0.2);
+    border: 3px solid var(--red);
 }
 
 .feature-img {
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 20px;
 }
