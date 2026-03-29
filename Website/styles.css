@@ -6,7 +6,8 @@
     --mid-grey:   #2e2e2e;
     --light-grey: #aaaaaa;
     --white:      #ffffff;
-    --red:        #e31b1b;   /* Main brand colour */
+    --red:        #e31b1b;  
+    --dark-red:   #b81515;
     --red-hover:  #b81515;
    
     --font-heading: "Oswald", sans-serif;  /* brand font */
@@ -146,7 +147,7 @@ img {
     min-width: 200px;
     border-top: 2px solid var(--red);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 20px var(--black);
     padding: 8px 0;
 
     /* Hidden */
@@ -259,7 +260,7 @@ img {
 .try-free-pass:hover {
     background-color: var(--red-hover);
     transform: translateY(-2px);  /* subtle lift on hover */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 1); 
+    box-shadow: 0 5px 10px var(--black)
 }
 
 /* =================== FEATURES HOME =================== */
@@ -309,7 +310,7 @@ img {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(218, 27, 27, 0.2);
+    box-shadow: 0 12px 30px var(--dark-red);
     border: 3px solid var(--red);
 }
 
@@ -332,6 +333,93 @@ img {
     color: var(--light-grey);
     font-size: 1rem;
 }
+
+/* =================== LOCATIONS =================== */
+
+#locations {
+    background-color: var(--black);
+    padding: 80px 40px;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 1 column on small screens, up to 3 on large */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.location-card {
+    border: 1px solid var(--mid-grey);
+    border-radius: 6px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.location-card:hover {
+    border-color: var(--red);
+}
+
+.location-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+    color: var(--red);
+}
+
+.location-card p {
+    color: var(--light-grey);
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+/* =================== ACTION BANNER =================== */
+
+#action-banner {
+    background-color: var(--red);
+    text-align: center;
+    padding: 70px 40px;
+}
+
+#action-banner h2 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+#action-banner p {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Override background inside red banner */
+#action-banner a {
+    background-color: var(--dark);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    border-radius: 3px;
+  
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#action-banner a:hover {
+    background-color: var(--mid-grey);
+    transform: translateY(-2px);  /* subtle lift on hover */
+    box-shadow: 0 5px 10px var(--black)
+}
+
+/* I wrote this a little different to the rest of the code because there would only be ONE of these sections needed
+in a future scenario, it just goes above the footer as a final inticing call to action. */
 
 /* =================== FOOTER =================== */
 
