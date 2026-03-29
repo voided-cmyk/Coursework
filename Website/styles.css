@@ -9,6 +9,7 @@
     --red:        #e31b1b;  
     --dark-red:   #b81515;
     --red-hover:  #b81515;
+    --copyright-grey: #555555;
    
     --font-heading: "Oswald", sans-serif;  /* brand font */
     --font-body:    "Lato", sans-serif;  /* brand font */
@@ -204,6 +205,8 @@ img {
     background-image: url("Images/Gym.jpg"); 
     background-size: cover;
     background-position: center;
+
+    transition: background-image 1s ease-in-out; /* Smooth transition if background changes */
 }
 
 .greeter-content {
@@ -471,5 +474,5 @@ in a future scenario, it just goes above the footer as a final inticing call to 
 
 .footer-copyright {
     font-size: 0.8rem;
-    color: #555;
+    color: var(--copyright-grey)
 }
