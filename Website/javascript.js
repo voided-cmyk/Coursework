@@ -14,10 +14,10 @@ const images = [
 let currentImageIndex = 0;
 
 function changeBackground() {
-    currentImageIndex = (currentImageIndex + 1) % images.length; // Loop through images
-    greeter.style.backgroundImage = `url(${images[currentImageIndex]})`;
+    currentImageIndex = (currentImageIndex + 1) % images.length; // image loop
+    greeter.style.backgroundImage = `url(${images[currentImageIndex]})`; // change image background
 }
 
-setInterval(changeBackground, 5000); // Change background every 5 seconds
+setInterval(changeBackground, 5000); // change every 5 seconds (may change this later)
 
 });
