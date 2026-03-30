@@ -415,6 +415,7 @@ img {
 in a future scenario, it just goes above the footer as a final inticing call to action. */
 
 /* =================== GENERAL FORM CSS =================== */
+/* radio-group, checkbox-group, text-group, textarea */
 
 /* --- BANNER --- */
 .form-banner {
@@ -491,12 +492,38 @@ label {
     display: block;
 }
 
-/* --- RADIO BUTTONS --- */
-.radio-group {
+/* --- GENERAL FORM --- */
+.text-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
     margin-bottom: 18px;
+}
+
+.text-group:last-child {
+    margin-bottom: 0;
+}
+
+/* --- RADIO BUTTONS --- */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: var(--light-grey);
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.radio-label:hover {
+    color: var(--white);
 }
 
 .radio-group:last-child {
