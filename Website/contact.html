@@ -85,11 +85,11 @@
         <p>You are our main priority - we'd love to hear from you!</p>
     </section>
 
-    <section id="contact-form">
-        <form id="contact-form" novalidate></form> <!-- Form is checked by javascript.js please remember this -->
+    <section id="form-section">
+        <form id="contact-form" novalidate> <!-- Form is checked by javascript.js please remember this -->
             <fieldset>
                 <legend>Personal Details</legend>
-                <div class="details">
+                <div class="radio-group">
                     <label for="full-name">Full Name <span class="required">*</span></label>
 
                     <input 
@@ -101,7 +101,7 @@
                     <span class="error-msg" id="error-name">Please enter your full name.</span> <!-- jQuery error message replacement -->
                 </div>
 
-                <div class="details">
+                <div class="radio-group">
                     <label for="email">Email Address <span class="required">*</span></label>
                     <input 
 
@@ -113,7 +113,7 @@
                     <span class="error-msg" id="error-email">Please enter a valid email address.</span> <!-- jQuery error message replacement -->
                 </div>
 
-                <div class="details">
+                <div class="radio-group">
                     <label for="phone">Phone Number</label> <!-- optional -->
                     <input 
                     id="phone" 
@@ -159,15 +159,15 @@
             <fieldset>
                 <legend>Message</legend>
 
-                <div class="form-group">
+                <div class="messagebox-group">
                     <label for="message">Your Message (optional)</label>
 
                     <textarea
                     id="message"
                     name="message"
                     rows="4"
-                    placeholder="Type your message here...">
-                    </textarea>
+                    type="text"
+                    placeholder="Type your message here..."></textarea>
 
                 </div>
             </fieldset>
@@ -178,7 +178,7 @@
             <div id="success-msg">  <!-- Success message -->
                 Submission received. We will be in touch within 24 hours.
             </div>
-    
+        </form>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
