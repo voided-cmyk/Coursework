@@ -444,7 +444,7 @@ in a future scenario, it just goes above the footer as a final inticing call to 
 /* --- GENERAL FORM CSS --- */
 #form-section {
     background-color: var(--dark);
-    padding: 60px 40px 80px;
+    padding: 60px 40px 60px;
 }
 
 fieldset {
@@ -656,13 +656,13 @@ input[type="radio"] {
 /* ---- SUCESS  ---- */
 #success-msg {
     display: none;                /* hidden until valid by JQuery */
-    background-color: #1a3d1a;
-    border: 1px solid #2c7a30;
+    background-color: #193a19;
+    border: 1px solid #308834;
     border-radius: 6px;
     color: #79b87c;
     text-align: center;
-    padding: 20px;
-    font-size: 1.1rem;
+    padding: 25px;
+    font-size: 1.5rem;
     font-family: var(--font-heading);
     letter-spacing: 1px;
 }
