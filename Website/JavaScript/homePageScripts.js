@@ -21,6 +21,8 @@ $(document).ready(function() {
         greeter.style.backgroundImage = `url(${images[currentImageIndex]})`; // change image background
         }
 
+        changeBackground(); // call once when page loads to set initial background
+
         setInterval(changeBackground, 5000); // change every 5 seconds (may change this later)
     }
 });
