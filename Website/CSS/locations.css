@@ -24,8 +24,10 @@ header p {
 }
 
 section {
+    margin-top: var(--nav-height);
     background-color: var(--black);
-    padding: 60px 40px;
+    padding: 60px;
+    padding-top: var(--nav-height);
     text-align: center;
 }
 
