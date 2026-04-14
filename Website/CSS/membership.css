@@ -1,0 +1,9 @@
+/* =================== MEMBERSHIP FORM SPECIFIC =================== */
+
+#membership-form {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;                    /* space between each <fieldset> */
+}

@@ -19,7 +19,6 @@ $(document).ready(function() {
             $("#full-name").removeClass("invalid");
         }
 
-
         /* === Email Validation === */
         var email = $("#email").val().trim();
 
@@ -43,7 +42,6 @@ $(document).ready(function() {
         } else {
             $("#error-membership").removeClass("show");
         }
-
 
         /* === After all checks passed show success message === */
         if (formIsValid) {

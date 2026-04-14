@@ -1,0 +1,39 @@
+/* =================== ABOUT PAGE =================== */
+
+main {
+    background-color: var(--black);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main section p {
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+main article {
+    margin-bottom: 40px;
+}
+
+main article p {
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+main aside p {
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
