@@ -1,16 +1,16 @@
 $(document).ready(function() {
-    console.log("Website has been loaded!");
+    console.log("Membership page loaded.");
 
-    // ============================== MEMBERSHIP FORMS ==============================
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     $("#membership-form").on("submit", function(event) {
-        event.preventDefault(); // allow for my own validation
-    
-        var formIsValid = true; 
+        event.preventDefault();
 
-        /* === Full Name Validation === */
-        var name = $("#full-name").val().trim(); 
-        if (name === "") { 
+        var formIsValid = true;
+        var name = $("#full-name").val().trim();
+        var email = $("#email").val().trim();
+
+        if (name === "") {
             $("#error-name").addClass("show");
             $("#full-name").addClass("invalid");
             formIsValid = false;
@@ -19,14 +19,7 @@ $(document).ready(function() {
             $("#full-name").removeClass("invalid");
         }
 
-
-        /* === Email Validation === */
-        var email = $("#email").val().trim();
-
-        // had to look this one up, but it basically returns true or false if it matches the pattern of a valid email.
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (email === "" || !emailRegex.test(email)) { // if the regex test fails, it returns false
+        if (email === "" || !emailRegex.test(email)) {
             $("#error-email").addClass("show");
             $("#email").addClass("invalid");
             formIsValid = false;
@@ -35,44 +28,32 @@ $(document).ready(function() {
             $("#email").removeClass("invalid");
         }
 
-        /* === Membership Type Validation === */
         if ($("input[name='membership']:checked").length === 0) {
-            // if no membership option is selected, show error
             $("#error-membership").addClass("show");
             formIsValid = false;
         } else {
             $("#error-membership").removeClass("show");
         }
 
-
-        /* === After all checks passed show success message === */
         if (formIsValid) {
-            // fade in animation
             $(this).find("fieldset, .form-submit").fadeOut(300, function() {
-                // Show success message after the fade-out finishes
                 $("#success-msg").fadeIn(400);
             });
 
-            // Log submitted data to the browser console (only for demonstration, I would send this to a server but the course doesn't cover that)
-            console.log("Form submitted! Values:");
-            console.log("Name: ", name);
-            console.log("Email: ", email);
-            console.log("Membership: ", $("input[name='membership']:checked").val());
+            console.log("Membership form submitted:");
+            console.log("Full name:", name);
+            console.log("Email:", email);
+            console.log("Membership type:", $("input[name='membership']:checked").val());
 
-            // Collect selected checkboxes
-            var facilities = [];
-            $("input[name='facility']:checked").each(function (){
-                facilities.push($(this).val());
+            var selectedFacilities = [];
+            $("input[name='facility']:checked").each(function() {
+                selectedFacilities.push($(this).val());
             });
-            console.log("Facilities: ", facilities.join(", ") || "None Preferred");
+            console.log("Selected facilities:", selectedFacilities.length ? selectedFacilities.join(", ") : "None preferred");
         }
+    });
 
-    }); // end of form submit function
-
-
-    // ============================== LIVE VALIDATION ==============================
-
-    $("#full-name").on("input", function() { // for any team members viewing, the value "this" refers to the input field that triggered the event, in this case the full name field.
+    $("#full-name").on("input", function() {
         if ($(this).val().trim() !== "") {
             $(this).removeClass("invalid");
             $("#error-name").removeClass("show");
@@ -80,7 +61,6 @@ $(document).ready(function() {
     });
 
     $("#email").on("input", function() {
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // same regex at line 27
         if (emailRegex.test($(this).val().trim())) {
             $(this).removeClass("invalid");
             $("#error-email").removeClass("show");
