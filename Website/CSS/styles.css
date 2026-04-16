@@ -472,6 +472,45 @@ th {
 
 /* 
 ====================================================================================================================
+===                                                    DEFAULT BG VIDEOS                                         ===
+====================================================================================================================
+*/
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+    min-width: 100%;
+}
+
+.video-overlay {
+    position: relative; 
+    z-index: 2;         
+    text-align: center;
+    color: var(--white);
+    
+    /* Box Styles */
+    border: 2px solid var(--red); /* The "fieldset" border */
+    padding: 40px 60px;             /* Space inside the box */
+    background-color: rgba(0, 0, 0, 0.4); /* Subtle dark tint inside the box */
+    backdrop-filter: blur(5px); 
+    max-width: 80%; /* limits incase screen is too wide */
+    box-shadow: 0 8px 20px var(--black);
+    transition : transform 0.2s ease, scale 1s ease-in-out, border-radius 3s ease;
+}
+
+.video-overlay:hover {
+    transform: translateY(-2px);
+    border-radius: 100%;
+    scale: 1.15;
+}
+
+
+
+/* 
+====================================================================================================================
 ===                                                    DEFAULT FORMS                                             ===
 ====================================================================================================================
 */
@@ -784,6 +823,7 @@ input[type="radio"] {
 #features {
     background-color: var(--dark);
     padding: 80px 40px; /* gap from top of screen and gap at edge of screen */
+    border-top: var(--red) 2px solid;
 }
 
 .features-grid {
@@ -839,11 +879,34 @@ input[type="radio"] {
 
 /* 
 ====================================================================================================================
+===                                           [1] BACKGROUND VIDEO                                               ===
+====================================================================================================================
+*/
+
+#home-video-section {
+    border-top: var(--red) 2px solid;
+    position: relative; 
+    width: 100%;
+    min-height: 1000px; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#home-video-section span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+/* 
+====================================================================================================================
 ===                                           [1] LOCATION CARDS                                                 ===
 ====================================================================================================================
 */
 
 #locations {
+    border-top: var(--red) 2px solid;
     background-color: var(--black);
     padding: 80px 60px;
 }
@@ -882,7 +945,16 @@ input[type="radio"] {
     font-size: 1.6rem;
     letter-spacing: 3px;
     margin-bottom: 14px;
-    color: var(--red);
+    color: var(--white);
+}
+
+.location-card h3::after {
+    content: ""; /* trick to create empty line */
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--red);
+    margin: 12px auto 0;
 }
 
 .location-card .location-cords {
@@ -1005,6 +1077,7 @@ input[type="radio"] {
 #facilities-top {
     background-color: var(--dark);
     padding: 40px 20px 0px 20px;
+    border-top: var(--red) 2px solid;
 }
 
 #facilities {
@@ -1013,6 +1086,7 @@ input[type="radio"] {
 }
 
 #facilities-video {
+    border-top: var(--red) 2px solid;
     position: relative; 
     width: 100%;
     min-height: 1000px; 
@@ -1020,14 +1094,6 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    object-fit: cover; 
 }
 
 .facility-grid {
