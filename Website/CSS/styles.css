@@ -66,7 +66,7 @@ a {
 }
 
 ul {
-    list-style: none; /* removes bullet points from all lists */
+    list-style: none; 
 }
 
 img {
@@ -701,6 +701,7 @@ input[type="radio"] {
 .required {
   color: var(--red);
 }
+
 /* === SUCCESS  === */
 #success-msg {
     display: none; /* hidden until valid by JQuery */
@@ -985,7 +986,7 @@ input[type="radio"] {
 
 .about-grid {
     display: grid;
-    /* each card can never be smaller than 2000px, but will expand to fill available space, repeat is a futureproofing feature */
+    /* each card can never be smaller than 300px, but will expand to fill available space, repeat is a futureproofing feature */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 50px;
 }
