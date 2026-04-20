@@ -1,3 +1,4 @@
+/* change any page info here */
 const pages = [
     { name: 'Home', path: 'home.html', summary: 'Welcome to UlsterActive, your fitness journey starts here.' },
     { name: 'About Us', path: 'Webpages/about.html', summary: 'Discover our mission, values, and what makes UlsterActive special.' },
@@ -9,18 +10,31 @@ const pages = [
 ];
 
 $(document).ready(function() {
+    /* if the webpage contains the path /Webpages/ then go up one ../ but if its home then stay on same level. 
+    functionally just determines if we're dealing with home or not. */
     const linkPrefix = window.location.pathname.includes('/Webpages/') ? '../' : '';
 
     pages.forEach(function(page) {
-        page.link = linkPrefix && page.name !== 'Home' ? page.path.replace('Webpages/', '') : linkPrefix + page.path;
+    /* Adjusts navigation links based on current directory depth.
+       if we are inside the 'Webpages' folder, we remove the directory prefix 
+       for subpages to keep them relative, while ensuring 'Home' points back to root.
+    */
+    if (linkPrefix && page.name !== 'Home') {
+        page.link = page.path.replace('Webpages/', '');
+    } else {
+        page.link = linkPrefix + page.path;
+    }
     });
+    /* I had to get help here as it was difficult to solve figuring out the path nightmare */
 
+    /* storage variables */
     const $input = $('#search-input');
     const $list = $('#autocomplete-list');
 
     $input.on('input', function() {
-        const query = $(this).val().toLowerCase();
-        $list.empty();
+        const query = $(this).val().toLowerCase(); /* sanitise input by making it lowercase */
+       
+        $list.empty(); /* empty the list from any previous searches */
 
         if (query) {
             pages.filter(function(page) {
@@ -31,10 +45,12 @@ $(document).ready(function() {
             });
             $list.show();
         } else {
+            /* if theres nothing to show then hide the inactive elements junk */
             $list.hide();
         }
     });
 
+    /* if the user presses enter then use the first item */
     $input.on('keydown', function(e) {
         if (e.key === 'Enter') { 
             const $firstItem = $list.find('li').first();
@@ -44,11 +60,19 @@ $(document).ready(function() {
         }
     });
 
+    /* go to the link shown by the list */
     $list.on('click', 'li', function() {
         window.location.href = $(this).data('link');
     });
 
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.search-container').length) $list.hide();
+    /* hide when you click away from the list */
+    $(document).on('click', function(event) {
+
+    const clickedElement = $(event.target);
+    const isInsideSearch = clickedElement.closest('.search-container').length > 0;
+
+    if (isInsideSearch === false) {
+        $list.hide();
+    }
     });
 });
