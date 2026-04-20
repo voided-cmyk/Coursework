@@ -54,6 +54,7 @@ $(document).ready(function() {
         }
     });
 
+    /* live validation */
     $("#full-name").on("input", function() {
         if ($(this).val().trim() !== "") {
             $(this).removeClass("invalid");

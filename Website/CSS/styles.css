@@ -177,10 +177,10 @@ img {
     padding: 5px;
 }
 /* Main navigation link styles */
-#navigation-links > li > a:hover,
-#navigation-links > li > a.active {
+#navigation-links > li > a:hover {
     color: var(--red);
 }
+
 /* join now button */
 .join-now {
     background-color: var(--red);
@@ -814,8 +814,6 @@ input[type="radio"] {
     transform: translateY(-4px);
 }
 
-
-
 /* 
 ====================================================================================================================
 ===                                           [1] FEATURE CARDS                                                 ====
@@ -986,7 +984,6 @@ input[type="radio"] {
 
 .about-grid {
     display: grid;
-    /* each card can never be smaller than 300px, but will expand to fill available space, repeat is a futureproofing feature */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 50px;
 }
