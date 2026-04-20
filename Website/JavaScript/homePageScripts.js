@@ -1,9 +1,8 @@
-// Wait for the page to load before running the script
-document.addEventListener('DOMContentLoaded', function() {
+// Wait for the page to load 
+$(document).ready(function() {
     backgroundChanger();
 });
 
-// Function to handle background image switching
 function backgroundChanger() {
     // Get the background element
     const greeterElement = document.getElementById("greeter");
@@ -22,10 +21,9 @@ function backgroundChanger() {
 
     // Function to change the background image
     function changeBackground(imageIndex) {
-        // Set the background image
+      
         greeterElement.style.backgroundImage = "url(" + backgroundImages[imageIndex] + ")";
         
-        // Remove the 'active' class from all indicator dots
         indicatorDots.forEach(function(dot) {
             dot.classList.remove('active');
         });
