@@ -68,11 +68,11 @@ $(document).ready(function() {
     /* hide when you click away from the list */
     $(document).on('click', function(event) {
 
-    const clickedElement = $(event.target);
-    const isInsideSearch = clickedElement.closest('.search-container').length > 0;
+        const clickedElement = $(event.target);
+        const isInsideSearch = clickedElement.closest('.search-container').length > 0;
 
-    if (isInsideSearch === false) {
+        if (isInsideSearch === false) {
         $list.hide();
-    }
-    });
+        }
+        });
 });
