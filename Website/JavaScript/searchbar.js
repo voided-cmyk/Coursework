@@ -50,29 +50,8 @@ $(document).ready(function() {
         }
     });
 
-    /* if the user presses enter then use the first item */
-    $input.on('keydown', function(e) {
-        if (e.key === 'Enter') { 
-            const $firstItem = $list.find('li').first();
-            if ($firstItem.length) {
-                window.location.href = $firstItem.data('link');
-            }
-        }
-    });
-
     /* go to the link shown by the list */
     $list.on('click', 'li', function() {
         window.location.href = $(this).data('link');
     });
-
-    /* hide when you click away from the list */
-    $(document).on('click', function(event) {
-
-        const clickedElement = $(event.target);
-        const isInsideSearch = clickedElement.closest('.search-container').length > 0;
-
-        if (isInsideSearch === false) {
-        $list.hide();
-        }
-        });
 });
