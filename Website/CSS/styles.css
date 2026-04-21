@@ -1012,6 +1012,8 @@ input[type="radio"] {
 .about-img {
     width: 200%; 
     height: 100%; 
+    max-width: 450px;
+    min-width: 100px;
     border-radius: 5px;
     overflow: hidden;
     object-fit: cover;
