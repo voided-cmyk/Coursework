@@ -30,7 +30,7 @@ How to Run
 
     Clone this repository.
 
-    Navigate to the MainWebsite folder.
+    Navigate to the Coursework folder.
 
     Open home.html in any modern web browser.
 
