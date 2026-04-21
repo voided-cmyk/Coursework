@@ -143,6 +143,7 @@ img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap;  
 }
 
 #navigation-links > li {
@@ -306,6 +307,12 @@ img {
 .dropdown li a:hover {
     background-color: var(--mid-grey);
     color: var(--white);
+}
+
+@media (max-width: 1000px) {
+    .navigation-logo, .join-now, .search-container {
+        display: none;
+    }
 }
 
 /* 
