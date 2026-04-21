@@ -15,9 +15,7 @@ $(document).ready(function() {
     const linkPrefix = window.location.pathname.includes('/Webpages/') ? '../' : '';
 
     pages.forEach(function(page) {
-    /* Adjusts navigation links based on current directory depth.
-       if we are inside the 'Webpages' folder, we remove the directory prefix 
-       for subpages to keep them relative, while ensuring 'Home' points back to root.
+    /* Research was used here to find this solution for the path prefixes but I have explained it fully within the report
     */
     if (linkPrefix && page.name !== 'Home') {
         page.link = page.path.replace('Webpages/', '');
