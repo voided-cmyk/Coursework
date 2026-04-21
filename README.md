@@ -2,21 +2,26 @@ Client Side Development - Group 2
 
 ![UlsterActive Website Screenshot](Website/Images/MainDesign.png)
 
-# Project Structure
-
 ### COURSEWORK/
 * **Documents/**: Project planning and meeting records.
-    * `Minutes`: A record of our team meetings and progress.
 * **Website/**: The core folder containing all files for the live site.
     * **CSS/**: Contains the site styling.
         * `styles.css`: All site styling and layout rules.
     * **Images/**: All visual assets for the website.
-        * `general-img-square.png`, `Gym.jpg`, `MainDesign.png`.
     * **JavaScript/**: Script files for interactivity.
-        * `checkMembership.js`, `homePageScripts.js`.
+        * `checkContact.js`: Handles contact form validation.
+        * `checkMembership.js`: Manages membership form logic.
+        * `homePageScripts.js`: General interactive elements for the home page.
+        * `searchbar.js`: Logic for the site search functionality.
+    * **Videos/**: Video assets for the website.
     * **Webpages/**: Secondary HTML pages.
-        * `about.html`, `contact.html`, `membership.html`, `finagy.html`, `timetables.html`, `yorkgate.html`.
-    * `home.html`: The main landing page.
+        * `about.html`: Information about the gym/organization.
+        * `contact.html`: Contact form page.
+        * `finagy.html`: Specific location or branch page.
+        * `membership.html`: Details on membership plans.
+        * `timetables.html`: Class and opening hour schedules.
+        * `yorkgate.html`: Specific location or branch page.
+    * `home.html`: The main landing page (index).
 * **Wireframe/**: Design blueprints.
     * `Wireframes.drawio`: Visual blueprints of the site layout.
 * **README.md**: General project overview and setup instructions.
