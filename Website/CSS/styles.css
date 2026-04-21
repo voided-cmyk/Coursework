@@ -1101,6 +1101,11 @@ input[type="radio"] {
     gap: 50px;
 }
 
+.facility-grid span {
+    color: var(--red);
+    font-weight: 700;
+}
+
 .facility-card {
     background-color: var(--dark-grey);
     border-radius: 10px;
