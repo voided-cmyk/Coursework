@@ -1,6 +1,7 @@
 Client Side Development - Group 2
 
-**EXAMINER NOTICE: Check each member's commit history on their profile which reflects only on this project, as a push origin main --force was used by one account.**
+**EXAMINER NOTICE: Check each member's commit history on their profile which reflects only on this project, as a push origin main --force was used by one account. `Members have committed more than what is
+shown in this repo history, check profiles only.`
 
 ![UlsterActive Website Screenshot](Website/Images/MainDesign.png)
 
