@@ -1,5 +1,7 @@
 Client Side Development - Group 2
 
+**EXAMINER NOTICE: Check each member's commit history on their profile which reflects only on this project, as a push origin main --force was used by one account.**
+
 ![UlsterActive Website Screenshot](Website/Images/MainDesign.png)
 
 ### COURSEWORK/
